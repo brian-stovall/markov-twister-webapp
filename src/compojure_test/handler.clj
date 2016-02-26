@@ -8,8 +8,12 @@
 (use 'markov-twister.generator)
  
 (defroutes app-routes
-  (GET "/" [] (hic-p/html5 [:h3 "Welcome!"]
-                           [:p (file->story "sample-text/grimm.txt" 50)]))
+  (GET "/" [] (hic-p/html5
+               [:head  (hic-p/include-css "/css/story.css")]
+               [:h3 "Welcome!"]
+               [:pre [:p (files->story 500
+                                       "sample-text/grimm.txt"
+                                       "sample-text/alice.txt")]]))
   
   (route/not-found "Not Found"))
 

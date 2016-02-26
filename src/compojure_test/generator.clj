@@ -91,7 +91,7 @@
 
 (defn file->story
   "Makes a story from a single file input."
-  [filename length]
+  [length filename]
   (word-chain->story (file->word-chain filename) length))
 
 (defn files->story 
