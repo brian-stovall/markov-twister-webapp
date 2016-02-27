@@ -5,7 +5,8 @@
             [ring.util.anti-forgery :as r-a-f]
             [hiccup.page :as hic-p]
             [hiccup.element :as hic-e]
-            [hiccup.form :as hic-f]))
+            [hiccup.form :as hic-f]
+            [clojure.java.io :as io]))
 
 (load "generator")
 (use 'markov-twister.generator)
@@ -23,9 +24,11 @@
                                           (r-a-f/anti-forgery-field)
                                           (hic-f/submit-button "Write it!"))))
 
-  (POST "/make-story" []
+  (POST "/make-story"
+        [req]
+        ;(io/copy (:body req) (io/output-stream (io/file "body.txt")))
         (hic-p/html5
-         [:h2 "Success"]))
+         [:p (str (:body req))]))
   
   (GET "/demo" [] (hic-p/html5
                [:head  (hic-p/include-css "/css/story.css")]
