@@ -6,11 +6,11 @@ body {
 }
 
 @font-face {
-	font-family: 'wonderland';
+	font-family: 'olde-scripte';
 		src: url("../fonts/wonderland.ttf") format('truetype');
 }
 	
 p {
-	font-size: 2vw;
-	font-family: 'wonderland';
+	font-size: 3vw;
+	font-family: 'olde-scripte';
 }
