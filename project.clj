@@ -5,7 +5,9 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [compojure "1.4.0"]
                  [ring/ring-defaults "0.1.5"]
-                 [hiccup "1.0.5"]]
+                 [hiccup "1.0.5"]
+                 [ring/ring-servlet "1.2.0-RC1"]]
+
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler compojure-test.handler/app}
   :profiles
