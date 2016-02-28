@@ -1,5 +1,5 @@
 (ns markov-twister.generator)
-(require clojure.set)
+(require 'clojure.set)
 
 (defn ending-punctuation? 
   "A predicate that returns a truthy value when char is . ! or ?"
