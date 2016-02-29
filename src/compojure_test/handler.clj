@@ -46,9 +46,6 @@
                          (hic-f/check-box :grimm false "sample-text/grimm.txt")
                          (hic-f/label :grimm "Grimm Fairytales")]
                         [:div
-                         (hic-f/check-box :macbeth false "sample-text/macbeth.txt")
-                         (hic-f/label :macbeth "Macbeth")]
-                        [:div
                          (hic-f/check-box :man false "sample-text/man.txt")
                          (hic-f/label :man "The Man With Two Left Feet")]
                         [:div
